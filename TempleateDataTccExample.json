@@ -1,0 +1,65 @@
+{
+  "renda": [
+    { "nome": "Salário Mensal", "valor": 3200, "data": "01/07/2025" },
+    { "nome": "Freelancer", "valor": 850, "data": "12/07/2025" },
+    { "nome": "Venda Online", "valor": 420, "data": "20/07/2025" },
+    { "nome": "Cashback Cartão", "valor": 45.50, "data": "05/07/2025" },
+    { "nome": "Aluguel de Quarto", "valor": 600, "data": "10/07/2025" }
+  ],
+  "saldo": [
+    { "nome": "Poupança", "valor": 6000, "data": "01/07/2025" },
+    { "nome": "Reserva Viagem", "valor": 2500, "data": "10/07/2025" },
+    { "nome": "Conta Corrente", "valor": 1850, "data": "15/07/2025" },
+    { "nome": "Investimento Renda Fixa", "valor": 12000, "data": "01/07/2025" }
+  ],
+  "despesas": [
+    { "nome": "Aluguel", "valor": 1200, "data": "05/07/2025" },
+    { "nome": "Mercado", "valor": 740, "data": "08/07/2025" },
+    { "nome": "Internet + Celular", "valor": 150, "data": "10/07/2025" },
+    { "nome": "Transporte", "valor": 320, "data": "12/07/2025" },
+    { "nome": "Lazer", "valor": 200, "data": "15/07/2025" },
+    { "nome": "Assinatura Netflix", "valor": 39.90, "data": "07/07/2025" },
+    { "nome": "Prestaçao Geladeira", "valor": 230, "data": "15/07/2025" },
+    { "nome": "Prestaçao Fogão", "valor": 210, "data": "15/07/2025" },
+    { "nome": "Farmácia", "valor": 88.75, "data": "17/07/2025" },
+    { "nome": "Manutenção Carro", "valor": 460, "data": "03/07/2025" },
+    { "nome": "Conta de Luz", "valor": 190, "data": "11/07/2025" },
+    { "nome": "Conta de Água", "valor": 95, "data": "13/07/2025" }
+  ],
+  "historicoLucro": [
+    { "mes": "2025-01", "lucro": 1720 },
+    { "mes": "2025-02", "lucro": 1870 },
+    { "mes": "2025-03", "lucro": 1435 },
+    { "mes": "2025-04", "lucro": 1630 },
+    { "mes": "2025-05", "lucro": 1080 },
+    { "mes": "2025-06", "lucro": 940 },
+    { "mes": "2025-07", "lucro": 1245 }
+  ],
+  "listas": {
+    "Compras Supermercado": {
+      "type": "checklist",
+      "items": [
+        { "text": "Arroz 5kg", "checked": false },
+        { "text": "Feijão 1kg", "checked": true },
+        { "text": "Leite 1L", "checked": false },
+        { "text": "Café 500g", "checked": true }
+      ]
+    },
+    "Tarefas Casa": {
+      "type": "checklist",
+      "items": [
+        { "text": "Lavar roupa", "checked": true },
+        { "text": "Limpar cozinha", "checked": false },
+        { "text": "Organizar quarto", "checked": false }
+      ]
+    },
+    "Filmes para Assistir": {
+      "type": "normal",
+      "items": [
+        { "text": "A Origem", "checked": false },
+        { "text": "Matrix", "checked": false },
+        { "text": "O Senhor dos Anéis", "checked": false }
+      ]
+    }
+  }
+}
