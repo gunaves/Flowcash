@@ -1,30 +1,49 @@
 {
   "renda": [
-    { "nome": "Salário Mensal", "valor": 3200, "data": "01/07/2025" },
-    { "nome": "Freelancer", "valor": 850, "data": "12/07/2025" },
-    { "nome": "Venda Online", "valor": 420, "data": "20/07/2025" },
-    { "nome": "Cashback Cartão", "valor": 45.50, "data": "05/07/2025" },
-    { "nome": "Aluguel de Quarto", "valor": 600, "data": "10/07/2025" }
+    { "nome": "Salário Mensal", "valor": 3200, "data": "01/09/2025" },
+    { "nome": "Freelancer - Site", "valor": 1200, "data": "08/09/2025" },
+    { "nome": "Venda Online", "valor": 650, "data": "05/09/2025" },
+    { "nome": "Cashback Cartão", "valor": 78.30, "data": "02/09/2025" },
+    { "nome": "Aluguel de Quarto", "valor": 600, "data": "10/09/2025" },
+    { "nome": "Investimento Dividendos", "valor": 340, "data": "11/09/2025" },
+    { "nome": "Bônus Empresa", "valor": 900, "data": "28/08/2025" },
+    { "nome": "Venda Carro Usado", "valor": 18500, "data": "15/08/2025" },
+    { "nome": "Reembolso Viagem", "valor": 480, "data": "07/09/2025" },
+    { "nome": "Trabalho Extra - Design", "valor": 950, "data": "12/09/2025" },
+    { "nome": "Royalties Ebook", "valor": 220, "data": "03/09/2025" },
+    { "nome": "Prêmio Concurso", "valor": 1500, "data": "30/08/2025" }
   ],
   "saldo": [
-    { "nome": "Poupança", "valor": 6000, "data": "01/07/2025" },
-    { "nome": "Reserva Viagem", "valor": 2500, "data": "10/07/2025" },
-    { "nome": "Conta Corrente", "valor": 1850, "data": "15/07/2025" },
-    { "nome": "Investimento Renda Fixa", "valor": 12000, "data": "01/07/2025" }
+    { "nome": "Poupança", "valor": 7200, "data": "01/09/2025" },
+    { "nome": "Reserva Viagem", "valor": 2800, "data": "10/09/2025" },
+    { "nome": "Conta Corrente", "valor": 2100, "data": "09/09/2025" },
+    { "nome": "Investimento Renda Fixa", "valor": 13500, "data": "01/09/2025" },
+    { "nome": "Carteira Digital", "valor": 320, "data": "07/09/2025" },
+    { "nome": "Ações Bolsa", "valor": 8900, "data": "10/09/2025" },
+    { "nome": "Previdência Privada", "valor": 24000, "data": "01/09/2025" },
+    { "nome": "Conta Universitária", "valor": 560, "data": "06/09/2025" }
   ],
   "despesas": [
-    { "nome": "Aluguel", "valor": 1200, "data": "05/07/2025" },
-    { "nome": "Mercado", "valor": 740, "data": "08/07/2025" },
-    { "nome": "Internet + Celular", "valor": 150, "data": "10/07/2025" },
-    { "nome": "Transporte", "valor": 320, "data": "12/07/2025" },
-    { "nome": "Lazer", "valor": 200, "data": "15/07/2025" },
-    { "nome": "Assinatura Netflix", "valor": 39.90, "data": "07/07/2025" },
-    { "nome": "Prestaçao Geladeira", "valor": 230, "data": "15/07/2025" },
-    { "nome": "Prestaçao Fogão", "valor": 210, "data": "15/07/2025" },
-    { "nome": "Farmácia", "valor": 88.75, "data": "17/07/2025" },
-    { "nome": "Manutenção Carro", "valor": 460, "data": "03/07/2025" },
-    { "nome": "Conta de Luz", "valor": 190, "data": "11/07/2025" },
-    { "nome": "Conta de Água", "valor": 95, "data": "13/07/2025" }
+    { "nome": "Aluguel", "valor": 1250, "data": "05/09/2025" },
+    { "nome": "Mercado", "valor": 890, "data": "08/09/2025" },
+    { "nome": "Internet + Celular", "valor": 160, "data": "10/09/2025" },
+    { "nome": "Transporte", "valor": 310, "data": "12/09/2025" },
+    { "nome": "Lazer", "valor": 240, "data": "06/09/2025" },
+    { "nome": "Assinatura Netflix", "valor": 39.90, "data": "07/09/2025" },
+    { "nome": "Prestação Geladeira", "valor": 230, "data": "15/09/2025" },
+    { "nome": "Prestação Fogão", "valor": 210, "data": "14/09/2025" },
+    { "nome": "Farmácia", "valor": 112.40, "data": "09/09/2025" },
+    { "nome": "Manutenção Carro", "valor": 680, "data": "29/08/2025" },
+    { "nome": "Conta de Luz", "valor": 200, "data": "11/09/2025" },
+    { "nome": "Conta de Água", "valor": 96, "data": "13/09/2025" },
+    { "nome": "Seguro Saúde", "valor": 450, "data": "01/09/2025" },
+    { "nome": "Streaming Música", "valor": 27.90, "data": "09/09/2025" },
+    { "nome": "IPTU", "valor": 980, "data": "20/08/2025" },
+    { "nome": "Academia", "valor": 120, "data": "03/09/2025" },
+    { "nome": "Gasolina", "valor": 220, "data": "10/09/2025" },
+    { "nome": "Cartão de Crédito - Fatura", "valor": 1540, "data": "12/09/2025" },
+    { "nome": "Compra Notebook", "valor": 4500, "data": "25/08/2025" },
+    { "nome": "Assinatura Cursos Online", "valor": 75, "data": "09/09/2025" }
   ],
   "historicoLucro": [
     { "mes": "2025-01", "lucro": 1720 },
@@ -33,7 +52,9 @@
     { "mes": "2025-04", "lucro": 1630 },
     { "mes": "2025-05", "lucro": 1080 },
     { "mes": "2025-06", "lucro": 940 },
-    { "mes": "2025-07", "lucro": 1245 }
+    { "mes": "2025-07", "lucro": 1245 },
+    { "mes": "2025-08", "lucro": 1380 },
+    { "mes": "2025-09", "lucro": 1520 }
   ],
   "listas": {
     "Compras Supermercado": {
@@ -42,7 +63,13 @@
         { "text": "Arroz 5kg", "checked": false },
         { "text": "Feijão 1kg", "checked": true },
         { "text": "Leite 1L", "checked": false },
-        { "text": "Café 500g", "checked": true }
+        { "text": "Café 500g", "checked": true },
+        { "text": "Detergente", "checked": false },
+        { "text": "Frutas variadas", "checked": false },
+        { "text": "Sabão em pó", "checked": false },
+        { "text": "Óleo de cozinha", "checked": true },
+        { "text": "Massa de macarrão", "checked": false },
+        { "text": "Molho de tomate", "checked": false }
       ]
     },
     "Tarefas Casa": {
@@ -50,7 +77,11 @@
       "items": [
         { "text": "Lavar roupa", "checked": true },
         { "text": "Limpar cozinha", "checked": false },
-        { "text": "Organizar quarto", "checked": false }
+        { "text": "Organizar quarto", "checked": false },
+        { "text": "Trocar lâmpada", "checked": false },
+        { "text": "Revisar encanamento", "checked": true },
+        { "text": "Passar aspirador", "checked": false },
+        { "text": "Arrumar estante", "checked": false }
       ]
     },
     "Filmes para Assistir": {
@@ -58,7 +89,21 @@
       "items": [
         { "text": "A Origem", "checked": false },
         { "text": "Matrix", "checked": false },
-        { "text": "O Senhor dos Anéis", "checked": false }
+        { "text": "O Senhor dos Anéis", "checked": false },
+        { "text": "Interestelar", "checked": false },
+        { "text": "Clube da Luta", "checked": false },
+        { "text": "Cisne Negro", "checked": false },
+        { "text": "Cidade de Deus", "checked": false }
+      ]
+    },
+    "Projetos Pessoais": {
+      "type": "checklist",
+      "items": [
+        { "text": "Finalizar TCC", "checked": false },
+        { "text": "Revisar currículo", "checked": true },
+        { "text": "Atualizar portfólio", "checked": false },
+        { "text": "Estudar React", "checked": false },
+        { "text": "Criar protótipo de app", "checked": false }
       ]
     }
   }

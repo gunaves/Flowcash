@@ -13,18 +13,34 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database-compat.js"></script>
 </head>
 
+<!-- ...existing code... -->
+
+<!-- ...existing code... -->
+
 <body>
     <header>
-        <div class="HeaderBG">
-            <img src="Icon.png" alt="Ícone" style="height: 30px; margin-right: 6px;" />
-            <h1>FlowCash</h1>
-            <div id="dataHora" style="margin-left: 30px; font-size: 0.9rem;"></div>
-            <nav class="nav-menu">
-                <button class="Content-nav-menu active"
-                    onclick="showSection('section-main', this)">Gerenciamento</button>
-                <button class="Content-nav-menu" onclick="showSection('section-graph', this)">Gráficos</button>
-                <button class="Content-nav-menu" onclick="showSection('section-extras', this)">Ferramentas</button>
-                <button class="Content-nav-menu" onclick="showSection('section-setings', this)">Ajustes</button>
+        <div class="HeaderBG menu-elevated">
+            <img src="Icon.png" alt="Ícone"
+                style="height: 38px; margin-right: 18px; border-radius: 10px; box-shadow: 0 2px 8px #0002;" />
+            <h1 style="font-size: 1.8rem; letter-spacing: 1.5px; margin-right: 38px; font-weight: 700; color: #7b5e47;">
+                FlowCash
+            </h1>
+            <div id="dataHora"
+                style="margin-left: 0; font-size: 1.1rem; color: #8d6e63; font-weight: bold; background: #fff; border-radius: 8px; padding: 4px 18px; box-shadow: 0 1px 4px #0001;">
+            </div>
+            <nav class="nav-menu nav-professional" style="margin-left: auto;">
+                <button class="Content-nav-menu active" onclick="showSection('section-main', this)">
+                    Gerenciamento
+                </button>
+                <button class="Content-nav-menu" onclick="showSection('section-graph', this)">
+                    Gráficos
+                </button>
+                <button class="Content-nav-menu" onclick="showSection('section-extras', this)">
+                    Ferramentas
+                </button>
+                <button class="Content-nav-menu" onclick="showSection('section-setings', this)">
+                    Ajustes
+                </button>
             </nav>
         </div>
     </header>
@@ -33,51 +49,78 @@
         <div class="main-container">
             <div class="menu-left-wrapper">
                 <div class="top-menus">
-                    <div class="menu_box_out menu-left">
-                        <div class="menu_box">
-                            <h1 style="text-align: center;">Resumo Geral</h1>
-                            <div class="data-row">
-                                <div class="data-block">
-                                    <p>Receita</p>
-                                    <div class="container-data">
-                                        <p id="receita-value">0,00</p>
+                    <div class="menu_box_out menu-left"
+                        style="background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); box-shadow: 0 2px 12px #0001;">
+                        <div class="menu_box" style="box-shadow: 0 1px 8px #0001;">
+                            <h1
+                                style="text-align: center; font-size: 1.3rem; color: #8d6e63; margin-bottom: 10px; letter-spacing: 1px;">
+                                Resumo Geral
+                            </h1>
+                            <div class="data-row" style="margin-bottom: 8px;">
+                                <div class="data-block"
+                                    style="background: #f8f5f2; border-radius: 8px; box-shadow: 0 1px 4px #0001;">
+                                    <p
+                                        style="font-size: 0.9rem; color: #6d4c41; font-weight: bold; margin-bottom: 2px;">
+                                        Receita</p>
+                                    <div class="container-data" style="background: #f3e9e1; color: #6d4c41;">
+                                        <p id="receita-value" style="font-size: 1.1rem; font-weight: bold;">0,00</p>
                                     </div>
                                 </div>
-                                <div class="data-block">
-                                    <p>Despesas</p>
-                                    <div class="container-data">
-                                        <p id="despesas-value">0,00</p>
+                                <div class="data-block"
+                                    style="background: #f8f5f2; border-radius: 8px; box-shadow: 0 1px 4px #0001;">
+                                    <p
+                                        style="font-size: 0.9rem; color: #a1887f; font-weight: bold; margin-bottom: 2px;">
+                                        Despesas</p>
+                                    <div class="container-data" style="background: #f3e9e1; color: #a1887f;">
+                                        <p id="despesas-value" style="font-size: 1.1rem; font-weight: bold;">0,00</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="data-row" style="margin-top: 8px;">
-                                <div class="data-block">
-                                    <p>Saldo armazenado</p>
-                                    <div class="container-data">
-                                        <p id="saldo-value">0,00</p>
+                                <div class="data-block"
+                                    style="background: #f8f5f2; border-radius: 8px; box-shadow: 0 1px 4px #0001;">
+                                    <p
+                                        style="font-size: 0.9rem; color: #bcaaa4; font-weight: bold; margin-bottom: 2px;">
+                                        Saldo armazenado</p>
+                                    <div class="container-data" style="background: #f3e9e1; color: #bcaaa4;">
+                                        <p id="saldo-value" style="font-size: 1.1rem; font-weight: bold;">0,00</p>
                                     </div>
                                 </div>
-                                <div class="data-block">
-                                    <p>Lucro</p>
-                                    <div class="container-data">
-                                        <p id="lucro-value">0,00</p>
+                                <div class="data-block"
+                                    style="background: #f8f5f2; border-radius: 8px; box-shadow: 0 1px 4px #0001;">
+                                    <p
+                                        style="font-size: 0.9rem; color: #8d6e63; font-weight: bold; margin-bottom: 2px;">
+                                        Lucro</p>
+                                    <div class="container-data" style="background: #f3e9e1; color: #8d6e63;">
+                                        <p id="lucro-value" style="font-size: 1.1rem; font-weight: bold;">0,00</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="button-row">
-                                <button id="export">Exportar</button>
-                                <button id="import">Importar</button>
+                            <div class="button-row" style="margin-top: 18px;">
+                                <button id="export"
+                                    style="background: linear-gradient(90deg,#bcaaa4 60%,#a1887f 100%); color: #fff; font-weight: bold; border: none; box-shadow: 0 2px 8px #bcaaa433;">
+                                    Exportar
+                                </button>
+                                <button id="import"
+                                    style="background: linear-gradient(90deg,#a1887f 60%,#bcaaa4 100%); color: #fff; font-weight: bold; border: none; box-shadow: 0 2px 8px #a1887f33;">
+                                    Importar
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="menu_box_out menu-right">
-                        <div class="menu_box">
-                            <h3 style="text-align: center;">Distribuição</h3>
+                    <div class="menu_box_out menu-right"
+                        style="background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); box-shadow: 0 2px 12px #0001;">
+                        <div class="menu_box" style="box-shadow: 0 1px 8px #0001;">
+                            <h3 style="text-align: center; font-size: 1.1rem; color: #8d6e63; margin-bottom: 10px;">
+                                Distribuição
+                            </h3>
                             <div class="grafico-legenda-container">
-                                <canvas id="graficoPizza" width="200" height="200" style="cursor: pointer;"></canvas>
+                                <canvas id="graficoPizza" width="200" height="200"
+                                    style="cursor: pointer; border-radius: 50%; box-shadow: 0 2px 12px #f8460633;"></canvas>
                                 <div>
                                     <canvas id="legendaPizza" width="140" height="70"></canvas>
-                                    <p id="valorSelecionado"></p>
+                                    <p id="valorSelecionado"
+                                        style="font-size: 1.1em; color: #8d6e63; font-weight: bold;"></p>
                                 </div>
                             </div>
                         </div>
@@ -85,197 +128,273 @@
                 </div>
 
                 <!-- Painel de gerenciamento -->
-                <div class="menu_box_out full-width-box" style="height: 70vh;">
-                    <div class="menu_box" style="height: 100%;">
+                <div class=" full-width-box menu_box_out"
+                    style="width: 100%;height: 70vh; box-shadow: 0 2px 12px #0001;display: flex;background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%);">
+                    <div class="menu_box" style="height: 100%; box-shadow: 0 1px 8px #0001;">
                         <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                            <!-- Listas -->
                             <!-- Filtros -->
                             <div
-                                style="width: 100%; display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; align-items: flex-end;">
-
+                                style="width: 100%; display: flex; gap: 6px; margin-bottom: 8px; flex-wrap: wrap; align-items: flex-end;border-radius: 8px; ">
                                 <div style="display: flex; flex-direction: column; flex: 1;">
-                                    <label for="filtro-nome" style="font-size: 0.7rem; color: #555;">Nome</label>
+                                    <label for="filtro-nome"
+                                        style="font-size: 0.7rem; color: #8d6e63; font-weight: bold;">Nome</label>
                                     <input type="text" id="filtro-nome" class="Caixa" placeholder="Ex: Aluguel">
                                 </div>
-
                                 <div style="display: flex; flex-direction: column; flex: 1;">
-                                    <label for="filtro-data-de" style="font-size: 0.7rem; color: #555;">Data de</label>
+                                    <label for="filtro-data-de"
+                                        style="font-size: 0.7rem; color: #8d6e63; font-weight: bold;">Data de</label>
                                     <input type="date" id="filtro-data-de" class="Caixa">
                                 </div>
-
                                 <div style="display: flex; flex-direction: column; flex: 1;">
-                                    <label for="filtro-data-ate" style="font-size: 0.7rem; color: #555;">Data
-                                        até</label>
+                                    <label for="filtro-data-ate"
+                                        style="font-size: 0.7rem; color: #8d6e63; font-weight: bold;">Data até</label>
                                     <input type="date" id="filtro-data-ate" class="Caixa">
                                 </div>
-
                                 <div style="display: flex; flex-direction: column; flex: 1;">
-                                    <label for="filtro-valor-de" style="font-size: 0.7rem; color: #555;">Valor
-                                        mín.</label>
+                                    <label for="filtro-valor-de"
+                                        style="font-size: 0.7rem; color: #8d6e63; font-weight: bold;">Valor mín.</label>
                                     <input type="number" step="0.01" id="filtro-valor-de" class="Caixa"
                                         placeholder="0,00">
                                 </div>
-
                                 <div style="display: flex; flex-direction: column; flex: 1;">
-                                    <label for="filtro-valor-ate" style="font-size: 0.7rem; color: #555;">Valor
-                                        máx.</label>
+                                    <label for="filtro-valor-ate"
+                                        style="font-size: 0.7rem; color: #8d6e63; font-weight: bold;">Valor máx.</label>
                                     <input type="number" step="0.01" id="filtro-valor-ate" class="Caixa"
                                         placeholder="0,00">
                                 </div>
-
                             </div>
-
-
 
                             <div style="flex: 2; display: flex; gap: 2px; flex-wrap: wrap;">
                                 <div style="flex: 1; min-width: 50px;">
-                                    <h3>Receita</h3>
+                                    <h3 style="color: #a1887f; font-weight: bold; font-size: 1rem; margin-bottom: 4px;">
+                                        Receita
+                                    </h3>
                                     <ul id="renda-list"></ul>
                                 </div>
                                 <div style="flex: 1; min-width: 50px;">
-                                    <h3>Saldo</h3>
+                                    <h3 style="color: #a1887f; font-weight: bold; font-size: 1rem; margin-bottom: 4px;">
+                                        Saldo
+                                    </h3>
                                     <ul id="saldo-list"></ul>
                                 </div>
                                 <div style="flex: 1; min-width: 50px;max-height: 80%;">
-                                    <h3>Despesas</h3>
+                                    <h3 style="color: #a1887f; font-weight: bold; font-size: 1rem; margin-bottom: 4px;">
+                                        Despesas
+                                    </h3>
                                     <ul id="despesas-list"></ul>
                                 </div>
                             </div>
 
-                            <!-- Formulário -->
-                            <div style="width: 140px; flex-shrink: 0;">
-                                <form id="entry-form" style="display: flex; flex-direction: column; gap: 10px;">
-                                    <input type="text" class="Caixa" id="nome" placeholder="Nome" required
-                                        autocomplete="off" />
-                                    <input type="number" class="Caixa" id="valor" placeholder="Valor" required
-                                        step="0.01" min="0" />
-                                    <input type="date" class="Caixa" id="data" required />
-                                    <select id="tipo" class="Caixa" required>
-                                        <option value="" hidden>Tipo</option>
-                                        <option value="renda">Receita</option>
-                                        <option value="saldo">Saldo</option>
-                                        <option value="despesas">Despesas</option>
-                                    </select>
-                                    <button type="submit" id="submit-button">Adicionar</button>
-                                </form>
-                            </div>
+
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="menu_box_out" style="width: 30%;">
-                <div class="notifications menu_box">
-                    <h1>Notificações</h1>
-                    <p>Nenhuma notificação no momento.</p>
+                    <!-- Formulário -->
+                    <div
+                        style="margin-left: 15px;width: 15%; left: auto; right: 100%; flex-shrink: 0; background: #f8f5f2; border-radius: 8px; box-shadow: 0 1px 4px #0001; padding: 8px;">
+                        <form id="entry-form" style="display: flex; flex-direction: column; gap: 10px;">
+
+                            <h1
+                                style="text-align: center; font-size: 1rem; color: #8d6e63; margin-bottom: 10px; letter-spacing: 1px;">
+                                Adicionar item
+                            </h1>
+
+                            <input type="text" class="Caixa" id="nome" placeholder="Nome" required autocomplete="off"
+                                style="font-size: 1rem;" />
+                            <input type="number" class="Caixa" id="valor" placeholder="Valor" required step="0.01"
+                                min="0" style="font-size: 1rem;" />
+                            <input type="date" class="Caixa" id="data" />
+
+                            <textarea name="" id="" class="Caixa" placeholder="Descricão"
+                                style="   max-width: 100%; min-width: 100%;max-height: 100px;min-height: 100px; border-radius: 8px;
+    border: 1.5px solid var(--cor-borda);
+    background: #fff;
+    font-size: 1rem;
+    transition: border 0.18s, box-shadow 0.18s;
+    color: var(--cor-texto);"></textarea>
+                            <select id="Rep" class="Caixa">
+                                <option value="">Nao repetir</option>
+                                <option value="renda">Repetir todo semana</option>
+                                <option value="saldo">Repetir todo mes </option>
+                                <option value="despesas">Intervalo personalizado</option>
+                            </select>
+                            <select id="tipo" class="Caixa" required style="font-size: 1rem;">
+                                <option value="" hidden>Tipo</option>
+                                <option value="renda">Receita</option>
+                                <option value="saldo">Saldo</option>
+                                <option value="despesas">Despesas</option>
+                            </select>
+                            <button type="submit" id="submit-button"
+                                style="background: linear-gradient(90deg,#bcaaa4 60%,#a1887f 100%); color: #fff; font-weight: bold; border: none; box-shadow: 0 2px 8px #bcaaa433;">
+                                <span id="submit-btn-text">Adicionar</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <div class="menu_box_out"
+                style="width: 30%; background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); box-shadow: 0 2px 12px #0001;">
+                <div class="notifications menu_box" style="box-shadow: 0 1px 8px #0001;">
+                    <h1 style="font-size: 1.1rem; color: #a1887f; margin-bottom: 10px;">
+                        Notificações
+                    </h1>
+                    <p style="color: #888;">Nenhuma notificação no momento.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ...existing code... -->
     <section id="section-graph">
-        <h2 style="text-align: center;">Gráficos de Detalhamento</h2>
-        <div class="main-container">
-            <div class="menu-left-wrapper">
-                <div class="top-menus">
-                    <div class="menu_box_out menu-left">
-                        <div class="menu_box">
-                            <h3>Despesas Detalhadas</h3>
-                            <canvas id="graficoDespesas" width="220" height="220" style="cursor: pointer;"></canvas>
-                        </div>
+        <div style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+
+            <!-- Gráficos de Pizza -->
+            <div
+                style="display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; margin-bottom: 30px;">
+                <!-- Gráfico de Despesas -->
+                <div style="flex: 1 1 300px; max-width: 360px;">
+                    <div
+                        style="background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); border-radius: 12px; box-shadow: 0 2px 8px #bcae9e22; padding: 20px;">
+                        <h3
+                            style="color: #a1887f; font-size: 1.1rem; margin-bottom: 16px; text-align: center; font-weight: 600;">
+                            Despesas Detalhadas
+                        </h3>
+                        <canvas id="graficoDespesas" width="220" height="220"
+                            style="cursor: pointer; border-radius: 50%; background: #d6ccc2; box-shadow: 0 2px 8px #a1887f22; margin: 0 auto; display: block;"></canvas>
                     </div>
-                    <div class="menu_box_out menu-left">
-                        <div class="menu_box">
-                            <h3>Receitas Detalhadas</h3>
-                            <canvas id="graficoRendas" width="220" height="220" style="cursor: pointer;"></canvas>
-                        </div>
+                </div>
+
+                <!-- Gráfico de Receitas -->
+                <div style="flex: 1 1 300px; max-width: 360px;">
+                    <div
+                        style="background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); border-radius: 12px; box-shadow: 0 2px 8px #bcae9e22; padding: 20px;">
+                        <h3
+                            style="color: #a1887f; font-size: 1.1rem; margin-bottom: 16px; text-align: center; font-weight: 600;">
+                            Receitas Detalhadas
+                        </h3>
+                        <canvas id="graficoRendas" width="220" height="220"
+                            style="cursor: pointer; border-radius: 50%; background: #d6ccc2; box-shadow: 0 2px 8px #6d4c4122; margin: 0 auto; display: block;"></canvas>
+                    </div>
+                </div>
+
+                <!-- Detalhe da Fatia -->
+                <div style="flex: 1 1 300px; max-width: 360px;">
+                    <div
+                        style="background: linear-gradient(120deg,#f5e7d7 60%,#e4ccb5 100%); border-radius: 12px; box-shadow: 0 2px 8px #bcae9e22; padding: 20px;">
+                        <h3
+                            style="color: #8d6e63; font-size: 1.1rem; margin-bottom: 16px; text-align: center; font-weight: 600;">
+                            Detalhe da Fatia
+                        </h3>
+
+                        <div id="detalhe-fatias"></div>
                     </div>
                 </div>
             </div>
-            <div class="notifications" id="detalhe-fatias">
-                <h1>Detalhe da Fatia</h1>
-                <p>Clique em uma fatia para ver detalhes.</p>
-            </div>
-        </div>
 
-        <div
-            style="padding: 20px; border-radius: 12px; max-width: 800px; margin: 0 auto; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h3 style="margin: 0;">Histórico de Lucro Mensal</h3>
-                <button onclick="salvarLucroManual()"
-                    style="padding: 6px 12px; border-radius: 5px; border: none; background-color: #3e8ed0; color: white; cursor: pointer;">Salvar
-                    lucro atual</button>
+            <!-- Gráfico de Lucro Mensal -->
+            <div
+                style="background: #f5e7d7 ; border-radius: 12px; box-shadow: 0 2px 8px #bcae9e22; padding: 20px; margin-top: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                    <h3 style="margin: 0; color: #7b5e47; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.5px;">
+                        Histórico de Lucro Mensal
+                    </h3>
+                    <button onclick="salvarLucroManual()"
+                        style="padding: 8px 20px; border-radius: 8px; border: none; background: linear-gradient(90deg,#bcaaa4 60%,#a1887f 100%); color: #fff; font-weight: bold; box-shadow: 0 2px 8px #bcaaa433; cursor: pointer; font-size: 0.9rem; letter-spacing: 0.5px; transition: filter 0.18s;">
+                        Salvar lucro atual
+                    </button>
+                </div>
+                <canvas id="graficoLucroMensal" width="1200" height="300"
+                    style="width: 100%; height: auto; background: rgb(211, 208, 192) ; border-radius: 8px; box-shadow: 0 1px 4px #0001;"></canvas>
             </div>
-            <canvas id="graficoLucroMensal" width="1060" height="240" style="width: 100%; height: auto;"></canvas>
         </div>
     </section>
+    <!-- ...existing code... -->
 
     <section id="section-extras">
-        <div class="extras-container" style="width: 100%;">
-
-            <!-- Calculadora -->
-            <div class="menu_box_out" style="flex: 1; min-width: 220px;">
-                <div class="menu_box">
-                    <h3>Calculadora</h3>
-                    <input type="text" id="calc-display" class="Caixa" readonly />
-                    <div class="calc-buttons">
-                        <button onclick="calcAdd('7')">7</button>
-                        <button onclick="calcAdd('8')">8</button>
-                        <button onclick="calcAdd('9')">9</button>
-                        <button onclick="calcAdd('/')">÷</button>
-                        <button onclick="calcAdd('4')">4</button>
-                        <button onclick="calcAdd('5')">5</button>
-                        <button onclick="calcAdd('6')">6</button>
-                        <button onclick="calcAdd('*')">×</button>
-                        <button onclick="calcAdd('1')">1</button>
-                        <button onclick="calcAdd('2')">2</button>
-                        <button onclick="calcAdd('3')">3</button>
-                        <button onclick="calcAdd('-')">−</button>
-                        <button onclick="calcAdd('0')">0</button>
-                        <button onclick="calcAdd('.')">.</button>
-                        <button onclick="calcResult()">=</button>
-                        <button onclick="calcAdd('+')">+</button>
-                        <button onclick="calcClear()" style="grid-column: span 4;">Limpar</button>
+        <div class="extras-container"
+            style="height: calc(100vh - 90px); display: flex; flex-direction: row; gap: 32px; max-width: 1200px; margin: 0 auto;">
+            <!-- Coluna Esquerda -->
+            <div style="flex: 0 0 340px; display: flex; flex-direction: column; gap: 24px; min-width: 280px;">
+                <!-- Gerenciador de Listas -->
+                <div class="menu_box_out" style="flex: 1 1 0; min-height: 260px; justify-content: flex-start;">
+                    <div class="menu_box" style="padding: 22px 18px;">
+                        <h3
+                            style="text-align: center; color: #7b5e47; font-size: 1.18rem; margin-bottom: 18px; letter-spacing: 0.5px;">
+                            Gerenciador de Listas
+                        </h3>
+                        <input type="text" id="search-lists" class="Caixa" placeholder="Pesquisar listas..."
+                            style="margin-bottom: 10px; width: 100%; padding: 10px;" />
+                        <div style="display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+                            <input type="text" id="new-list-name" class="Caixa" placeholder="Nome da lista..."
+                                style="flex: 2;" />
+                            <select id="new-list-type" class="Caixa" style="flex: 1;">
+                                <option value="normal">Lista padrão</option>
+                                <option value="checklist">Checklist</option>
+                            </select>
+                            <button onclick="createNewList()" style="flex: 1; padding: 10px;">Criar</button>
+                        </div>
+                        <ul id="lists-manager"
+                            style="max-height: 220px; overflow-y: auto; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: #fff;">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Calculadora -->
+                <div class="menu_box_out" style="flex: 0 0 200px;">
+                    <div class="menu_box" style="padding: 20px 18px;">
+                        <h3 style="text-align: center; color: #7b5e47; font-size: 1.15rem; margin-bottom: 14px;">
+                            Calculadora</h3>
+                        <input type="text" id="calc-display" class="Caixa" readonly
+                            style="font-size: 1.1rem; text-align: right; padding: 8px; margin-bottom: 10px;" />
+                        <div class="calc-buttons"
+                            style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px;">
+                            <button onclick="calcAdd('7')">7</button>
+                            <button onclick="calcAdd('8')">8</button>
+                            <button onclick="calcAdd('9')">9</button>
+                            <button onclick="calcAdd('/')">÷</button>
+                            <button onclick="calcAdd('4')">4</button>
+                            <button onclick="calcAdd('5')">5</button>
+                            <button onclick="calcAdd('6')">6</button>
+                            <button onclick="calcAdd('*')">×</button>
+                            <button onclick="calcAdd('1')">1</button>
+                            <button onclick="calcAdd('2')">2</button>
+                            <button onclick="calcAdd('3')">3</button>
+                            <button onclick="calcAdd('-')">−</button>
+                            <button onclick="calcAdd('0')">0</button>
+                            <button onclick="calcAdd('.')">.</button>
+                            <button onclick="calcResult()">=</button>
+                            <button onclick="calcAdd('+')">+</button>
+                            <button onclick="calcClear()" style="grid-column: span 4;">Limpar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Lista de Listas -->
-            <div class="menu_box_out" style="flex: 1; min-width: 220px;">
-                <div class="menu_box">
-                    <input type="text" id="search-lists" class="Caixa" placeholder="Pesquisar listas e itens..."
-                        style="margin-bottom:5px; width:100%;" />
-                    <h3>Minhas Listas</h3>
-                    <div style="display:flex; gap:5px; margin-bottom:5px; flex-wrap: wrap;">
-                        <ul id="lists-manager"></ul>
-                        <input type="text" id="new-list-name" class="Caixa" placeholder="Nome da lista..." />
-                        <select id="new-list-type" class="Caixa">
-                            <option value="normal">Lista padrão</option>
-                            <option value="checklist">Checklist</option>
-                        </select>
-                        <button onclick="createNewList()">Criar</button>
+            <!-- Coluna Direita: Lista aberta -->
+            <div class="menu_box_out"
+                style="flex: 1 1 0; min-width: 340px; display: flex; flex-direction: column; justify-content: flex-start;">
+                <div class="menu_box" style="padding: 22px 18px; display: flex; flex-direction: column; height: 100%;">
+                    <h3 id="current-list-title"
+                        style="text-align: center; color: #7b5e47; font-size: 1.18rem; margin-bottom: 18px; letter-spacing: 0.5px;">
+                        Itens da Lista
+                    </h3>
+                    <ul id="custom-list"
+                        style="flex: 1 1 auto; min-height: 0; margin-bottom: 12px; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 10px;">
+                    </ul>
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
+                        <input type="text" id="list-input" class="Caixa" placeholder="Novo item..."
+                            style="flex: 2; padding: 10px;" />
+                        <input type="date" style="   border-radius: 8px;
+    border: 1.5px solid var(--cor-borda);
+    background: #fff;
+    font-size: 1rem;
+    transition: border 0.18s, box-shadow 0.18s;
+    color: var(--cor-texto);">
+                        <button onclick="addListItem()" style="flex: 1; padding: 10px;">Adicionar</button>
                     </div>
-
-
-                </div>
-            </div>
-
-            <!-- Itens da Lista -->
-            <div class="menu_box_out" style="flex: 2; min-width: 600px;">
-                <div class="menu_box" style="flex: 2; min-width: 600px;">
-                    <h3 id="current-list-title">Itens da Lista</h3>
-                    <ul style="height: 900px; max-height: 300px;" id="custom-list"></ul>
-                    <div style="display:flex; gap:5px; margin-bottom:5px;">
-                        <input type="text" id="list-input" class="Caixa" placeholder="Novo item..." />
-                        <button onclick="addListItem()">Adicionar</button>
-                    </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-
 
 
     <section id="section-setings">

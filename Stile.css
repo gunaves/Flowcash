@@ -3,35 +3,14 @@
 }
 
 body {
-    background: #e4ccb5;
+    background: #52473e;
     margin: 0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
 }
 
-section {
-    display: none;
-}
 
-section.active {
-    display: block;
-    margin: 10px;
-    padding: 9px;
-}
 
-.HeaderBG {
-    background: #c6beb5;
-    color: #505050;
-    border: 2px solid #737373;
-    border-radius: 20px;
-    padding: 10px 30px 0;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    height: 55px;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-    margin-top: -15px;
-}
 
 h1,
 h2,
@@ -93,8 +72,8 @@ p {
     padding: 2px 0;
     border-radius: 5px;
     min-width: 90px;
-    color: white;
-    -webkit-text-fill-color: #eee;
+    color: rgb(0, 0, 0);
+    -webkit-text-fill-color: #000000;
 }
 
 .data-row {
@@ -385,9 +364,6 @@ li:hover {
 /* ===== TEMAS ===== */
 
 /* Tema Bege (padrão) */
-body.tema-bege {
-    background: #e4ccb5;
-}
 
 body.tema-bege .HeaderBG {
     background: #c6beb5;
@@ -433,10 +409,7 @@ body.tema-light {
     background: #f4f4f4;
 }
 
-body.tema-light .HeaderBG {
-    background: #e0e0e0;
-    color: #333;
-}
+
 
 body.tema-light .menu_box_out {
     background: #e0e0e0;
@@ -446,12 +419,7 @@ body.tema-light .menu_box {
     background: #f8f8f8;
 }
 
-.extras-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
+
 
 .calc-buttons {
     display: grid;
@@ -476,29 +444,30 @@ body.tema-light .menu_box {
 #custom-list li {
     display: flex;
     align-items: center;
+    /* alinha verticalmente */
     justify-content: space-between;
-    gap: 6px;
+    gap: 8px;
 }
 
 #custom-list li input[type="checkbox"] {
+    margin: 0;
+    /* remove margens que empurram */
     transform: scale(1.2);
-    margin-right: 6px;
+    /* mantém o tamanho maior se quiser */
 }
 
 #custom-list li span {
     flex: 1;
+    /* ocupa espaço central */
 }
+
 
 #custom-list .item-actions {
     display: flex;
     gap: 4px;
 }
 
-.extras-container {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-}
+
 
 #lists-manager li {
     display: flex;
@@ -515,10 +484,7 @@ body.tema-light .menu_box {
     font-weight: bold;
 }
 
-#lists-manager .list-actions button {
-    padding: 2px 5px;
-    font-size: 0.75rem;
-}
+
 
 #custom-list li {
     display: flex;
@@ -545,13 +511,6 @@ body.tema-light .menu_box {
 }
 
 
-
-/* Layout de Ferramentas */
-.extras-container {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-}
 
 #lists-manager li {
     display: flex;
@@ -616,29 +575,10 @@ body.tema-light .menu_box {
 }
 
 
-/* ===== Estilo Melhorado - Seção Extras ===== */
-#section-extras {
-    max-height: 60vh;
-    /* altura máxima no topo */
-    overflow: hidden;
-    /* impede crescer */
-}
 
-#section-extras .extras-container {
-    display: flex;
-    gap: 12px;
-    align-items: stretch;
-    height: 100%;
-}
 
 /* Todos os blocos da seção extras */
-#section-extras .menu_box_out {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 200px;
-    max-height: 100%;
-}
+
 
 /* Ajuste interno para permitir rolagem em listas */
 #lists-manager,
@@ -654,17 +594,19 @@ body.tema-light .menu_box {
 /* Melhorando os botões de ação das listas */
 #lists-manager .list-actions button,
 #custom-list .item-actions button {
-    background: #f0f0f0;
+    background: #6d6d6d;
     border: 1px solid #bbb;
     border-radius: 4px;
     padding: 3px 6px;
     cursor: pointer;
+    color: #ffffff;
     transition: background 0.2s, transform 0.1s;
 }
 
 #lists-manager .list-actions button:hover,
 #custom-list .item-actions button:hover {
     background: #ddd;
+    color: #333;
     transform: translateY(-1px);
 }
 
@@ -705,7 +647,7 @@ body.tema-light .menu_box {
 #renda-list,
 #saldo-list,
 #despesas-list {
-    max-height: 350px;
+    max-height: 50%;
     /* altura máxima para cada lista */
     overflow-y: auto;
     /* rolagem interna */
@@ -795,38 +737,80 @@ li {
 
 
 
+/* NOVA PALETA VISUAL MODERNA */
+
+/* Paleta principal: tons de azul, roxo, cinza e branco */
 :root {
-    /* Cores padrão (tema bege) */
-    --cor-bg-principal: #e4ccb5;
-    --cor-header-bg: #c6beb5;
-    --cor-header-text: #505050;
-    --cor-caixa-externa: #c6beb5;
-    --cor-caixa-interna: #d6ccc2;
-    --cor-texto: #505050;
-    --cor-botao-bg: rgba(255, 255, 255, 0.3);
-    --cor-botao-texto: #8f867d;
+    --cor-bg-principal: #f6f7fb;
+    --cor-header-bg: #4f46e5;
+    --cor-header-text: #fff;
+    --cor-caixa-externa: #e0e7ff;
+    --cor-caixa-interna: #fff;
+    --cor-texto: #232946;
+    --cor-botao-bg: #4f46e5;
+    --cor-botao-texto: #fff;
+    --cor-azul: #6366f1;
+    --cor-verde: #22d3ee;
+    --cor-cinza: #e5e7eb;
+    --cor-vermelho: #ef4444;
+    --cor-amarelo: #fde68a;
+    --cor-roxo: #a78bfa;
+    --cor-rosa: #f472b6;
+    --cor-destaque: #818cf8;
+    --cor-destaque2: #f1f5f9;
+
+    --cor-hover: #eef2ff;
+    --cor-shadow: #6366f133;
 }
 
+/* Tema Bege (padrão) */
+body.tema-bege {
+    --cor-bg-principal: #f6f7fb;
+    --cor-header-bg: #4f46e5;
+    --cor-header-text: #fff;
+    --cor-caixa-externa: #e0e7ff;
+    --cor-caixa-interna: #fff;
+    --cor-texto: #232946;
+    --cor-botao-bg: #4f46e5;
+    --cor-botao-texto: #fff;
+    --cor-destaque: #818cf8;
+    --cor-destaque2: #f1f5f9;
+
+    --cor-hover: #eef2ff;
+    --cor-shadow: #6366f133;
+}
+
+/* Tema Dark */
 body.tema-dark {
-    --cor-bg-principal: #1e1e1e;
-    --cor-header-bg: #2c2c2c;
-    --cor-header-text: #eee;
-    --cor-caixa-externa: #2c2c2c;
-    --cor-caixa-interna: #3a3a3a;
-    --cor-texto: #eee;
-    --cor-botao-bg: #444;
-    --cor-botao-texto: #ddd;
+    --cor-bg-principal: #18181b;
+    --cor-header-bg: #232946;
+    --cor-header-text: #f3f4f6;
+    --cor-caixa-externa: #232946;
+    --cor-caixa-interna: #18181b;
+    --cor-texto: #f3f4f6;
+    --cor-botao-bg: #6366f1;
+    --cor-botao-texto: #fff;
+    --cor-destaque: #818cf8;
+    --cor-destaque2: #232946;
+
+    --cor-hover: #312e81;
+    --cor-shadow: #6366f133;
 }
 
+/* Tema Light */
 body.tema-light {
-    --cor-bg-principal: #f4f4f4;
-    --cor-header-bg: #e0e0e0;
-    --cor-header-text: #333;
-    --cor-caixa-externa: #e0e0e0;
-    --cor-caixa-interna: #f8f8f8;
-    --cor-texto: #333;
-    --cor-botao-bg: #fff;
-    --cor-botao-texto: #333;
+    --cor-bg-principal: #f9fafb;
+    --cor-header-bg: #e0e7ff;
+    --cor-header-text: #4f46e5;
+    --cor-caixa-externa: #e0e7ff;
+    --cor-caixa-interna: #fff;
+    --cor-texto: #232946;
+    --cor-botao-bg: #6366f1;
+    --cor-botao-texto: #fff;
+    --cor-destaque: #818cf8;
+    --cor-destaque2: #f1f5f9;
+    --cor-hover: #eef2ff;
+    --cor-shadow: #6366f133;
 }
 
 /* Uso das variáveis */
@@ -835,17 +819,17 @@ body {
     color: var(--cor-texto);
 }
 
-.HeaderBG {
-    background: var(--cor-header-bg);
-    color: var(--cor-header-text);
-}
-
 .menu_box_out {
     background: var(--cor-caixa-externa);
+    box-shadow: 0 2px 12px var(--cor-shadow);
+    border-radius: 16px !important;
 }
 
 .menu_box {
     background: var(--cor-caixa-interna);
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 1px 8px var(--cor-shadow);
 }
 
 h1,
@@ -858,4 +842,396 @@ p {
 button {
     background: var(--cor-botao-bg);
     color: var(--cor-botao-texto);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+
+button:hover,
+.Content-nav-menu:hover:not(.active),
+.button-row button:hover,
+form button#submit-button:hover {
+    background: var(--cor-destaque);
+    color: #fff;
+    filter: brightness(1.08);
+    box-shadow: 0 2px 8px var(--cor-shadow);
+}
+
+.Content-nav-menu {
+    font-size: 1.1rem;
+    border: none;
+    background: transparent;
+    color: var(--cor-destaque);
+    padding: 7px 18px;
+    margin-top: 3px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    letter-spacing: 0.5px;
+}
+
+.Content-nav-menu.active,
+.Content-nav-menu:focus {
+    color: #fff;
+    background: linear-gradient(90deg, var(--cor-destaque) 60%, var(--cor-azul) 100%);
+    box-shadow: 0 2px 8px var(--cor-shadow);
+}
+
+.Content-nav-menu:hover:not(.active) {
+    background: var(--cor-hover);
+    color: var(--cor-azul);
+}
+
+ul,
+#custom-list,
+#lists-manager,
+ul#renda-list,
+ul#saldo-list,
+ul#despesas-list {
+    background: var(--cor-caixa-interna);
+    border-radius: 8px;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    border: 1.5px solid var(--cor-borda);
+}
+
+li {
+    border-radius: 8px;
+    background: var(--cor-destaque2);
+    margin-bottom: 7px;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    transition: background 0.18s;
+    color: var(--cor-texto);
+}
+
+li:hover {
+    background: var(--cor-hover);
+}
+
+.item-actions button {
+    border-radius: 6px;
+    background: var(--cor-hover);
+    color: var(--cor-azul);
+    border: none;
+    font-size: 1.1em;
+    padding: 2px 7px;
+    margin-left: 2px;
+    transition: background 0.18s, color 0.18s;
+}
+
+.item-actions button:hover {
+    background: var(--cor-azul);
+    color: #fff;
+}
+
+.container-data {
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    background: var(--cor-caixa-externa);
+    color: var(--cor-header-bg);
+}
+
+.notifications.menu_box {
+    border-radius: 14px;
+    background: #f1f5f9;
+    box-shadow: 0 2px 8px var(--cor-vermelho)33;
+}
+
+.notifications.menu_box h1 {
+    color: var(--cor-vermelho);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.notifications.menu_box p {
+    color: #888;
+}
+
+input.Caixa,
+select.Caixa {
+    border-radius: 8px;
+    border: 1.5px solid var(--cor-borda);
+    background: #fff;
+    font-size: 1rem;
+    transition: border 0.18s, box-shadow 0.18s;
+    color: var(--cor-texto);
+}
+
+input.Caixa:focus,
+select.Caixa:focus {
+    border: 1.5px solid var(--cor-azul);
+    box-shadow: 0 0 0 2px var(--cor-shadow);
+    outline: none;
+}
+
+form button#submit-button {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 8px 0;
+    margin-top: 8px;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    background: linear-gradient(90deg, var(--cor-destaque) 60%, var(--cor-azul) 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background: var(--cor-caixa-externa);
+    border-radius: 4cqb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cor-destaque);
+    border-radius: 4px;
+}
+
+/* Calculadora */
+#calc-display {
+    font-size: 1.1rem;
+    padding: 8px;
+    text-align: right;
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    background: #fff;
+    font-weight: bold;
+    color: var(--cor-texto);
+}
+
+.calc-buttons button {
+    background: var(--cor-hover);
+    border: 1px solid var(--cor-borda);
+    font-size: 1.1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px var(--cor-shadow);
+    transition: background 0.2s, transform 0.1s;
+    color: var(--cor-header-bg);
+}
+
+.calc-buttons button:hover {
+    background: var(--cor-destaque);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.calc-buttons button:active {
+    transform: translateY(1px);
+    background: var(--cor-azul);
+    color: #fff;
+}
+
+/* Ajuste para listas com rolagem fixa */
+#lists-manager,
+#custom-list,
+#renda-list,
+#saldo-list,
+#despesas-list {
+    max-height: calc(100vh - 558px);
+    overflow-y: auto;
+    padding-right: 4px;
+    margin: 2px;
+}
+
+/* Botões compactos de ação */
+.item-actions {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+}
+
+.item-actions button {
+    padding: 2px 4px;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--cor-azul);
+    transition: color 0.2s, transform 0.1s;
+}
+
+.item-actions button:hover {
+    color: var(--cor-header-bg);
+    transform: scale(1.1);
+}
+
+/* Espaço para botões */
+li {
+    padding-right: 60px;
+    position: relative;
+}
+
+/* Checkbox antes do nome */
+#custom-list li input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: var(--cor-azul);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .menu_box_out,
+    .menu_box {
+        min-width: unset !important;
+    }
+}
+
+/* Seções */
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+    margin: 1px;
+    padding: 3px;
+    background: transparent;
+    scrollbar-width: 0;
+}
+
+/* Ajuste para listas custom */
+#custom-list li {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+    background: var(--cor-caixa-interna);
+    border-radius: 4px;
+    margin-top: 4px;
+    color: var(--cor-texto);
+}
+
+#custom-list li input[type="checkbox"] {
+    order: 0;
+}
+
+#custom-list li span {
+    order: 1;
+    flex: 1;
+}
+
+#custom-list li .item-actions {
+    order: 2;
+}
+
+/* Filtros */
+#filtro-nome,
+#filtro-data-de,
+#filtro-data-ate,
+#filtro-valor-de,
+#filtro-valor-ate {
+    flex-shrink: 0;
+    min-width: unset;
+    background: #fff;
+    color: var(--cor-texto);
+    border: 1.5px solid var(--cor-borda);
+}
+
+/* Gráficos */
+.grafico-duplo-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.grafico-box {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    background: var(--cor-caixa-externa);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px var(--cor-shadow);
+}
+
+.grafico-legenda-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Notificações */
+.notifications.menu_box {
+    background: #f1f5f9;
+    color: var(--cor-vermelho);
+    border: 1.5px solid var(--cor-borda);
+}
+
+/* Outras melhorias visuais */
+.button-row button {
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 8px 0;
+    margin: 0 6px;
+    box-shadow: 0 1px 4px var(--cor-shadow);
+    background: linear-gradient(90deg, var(--cor-destaque) 60%, var(--cor-azul) 100%);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+.button-row button:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 2px 8px var(--cor-shadow);
+    background: var(--cor-azul);
+}
+
+input.Caixa,
+select.Caixa {
+    border-radius: 8px;
+    border: 1.5px solid var(--cor-borda);
+    background: #fff;
+    font-size: 1rem;
+    transition: border 0.18s, box-shadow 0.18s;
+    color: var(--cor-texto);
+}
+
+input.Caixa:focus,
+select.Caixa:focus {
+    border: 1.5px solid var(--cor-azul);
+    box-shadow: 0 0 0 2px var(--cor-shadow);
+    outline: none;
+}
+
+body {
+    background: #b8b0a9;
+    color: #1d1d1d;
+}
+
+.HeaderBG {
+    background: #c6beb5;
+    color: #505050;
+    border: 2px solid #737373;
+    border-radius: 20px;
+    padding: 10px 30px 0;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+
+#detalhe-fatias p {
+    font-size: 1rem;
+    /* aumenta texto principal */
+    line-height: 1.4;
+    /* melhora espaçamento */
 }
